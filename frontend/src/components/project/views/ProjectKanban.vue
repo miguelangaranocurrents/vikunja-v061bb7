@@ -354,6 +354,9 @@ const DRAG_OPTIONS = {
 	dragClass: 'task-dragging',
 	delayOnTouchOnly: true,
 	delay: 1000,
+	// Sortable's default edge zone is 30px, which is too thin to reliably reach buckets
+	// off screen: the board would never scroll while a task is held near its edge.
+	scrollSensitivity: 100,
 } as const
 
 const MIN_SCROLL_HEIGHT_PERCENT = 0.25
